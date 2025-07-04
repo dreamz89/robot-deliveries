@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react"
 import { styled } from "styled-components"
+import axios from "axios"
 
-import RobotCard from "./components/RobotCard"
+// import RobotCard from "./components/RobotCard"
 import { GlobalStyle } from "./GlobalStyle"
 
 const Container = styled.div`
@@ -12,12 +14,29 @@ const Cards = styled.div`
 `
 
 function App() {
+  const [robotsData, setRobotsData] = useState()
+
+  const getData = async () => {
+    try {
+      const response = await axios.get("robots.json")
+      setRobotsData(response.data)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <>
       <GlobalStyle />
       <Container>
         <Cards>
-          <RobotCard />
+          {/* {robotsData.map((data) => (
+            <RobotCard key={data.robotId} {...data} />
+          ))} */}
         </Cards>
       </Container>
     </>
