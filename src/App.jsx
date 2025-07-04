@@ -1,13 +1,25 @@
+import { styled } from "styled-components"
+
+import RobotCard from "./components/RobotCard"
+import { GlobalStyle } from "./GlobalStyle"
+
+const Container = styled.div`
+  max-width: 1280px;
+`
+
+const Cards = styled.div`
+  margin: 24px;
+`
 
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+      <GlobalStyle />
+      <Container>
+        <Cards>
+          <RobotCard />
+        </Cards>
+      </Container>
     </>
   )
 }
