@@ -7,15 +7,21 @@ import { GlobalStyle } from "@/assets/styles/global"
 import { theme } from "@/assets/styles/theme"
 
 const Container = styled.div`
+  padding: 16px;
+  margin: 0 auto;
   max-width: 1280px;
+  width: 100%;
 `
 
 const Cards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   margin: 24px;
 `
 
 function App() {
-  const [robotsData, setRobotsData] = useState()
+  const [robotsData, setRobotsData] = useState([])
 
   const getData = async () => {
     try {
@@ -35,9 +41,9 @@ function App() {
       <GlobalStyle />
       <Container>
         <Cards>
-          {/* {robotsData.map((data) => (
+          {robotsData.map((data) => (
             <RobotCard key={data.robotId} {...data} />
-          ))} */}
+          ))}
         </Cards>
       </Container>
     </ThemeProvider>
