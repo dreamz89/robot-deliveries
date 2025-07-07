@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
+    color: ${({ theme }) => theme.color.black};
+    font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
   }

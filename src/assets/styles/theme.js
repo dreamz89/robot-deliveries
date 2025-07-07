@@ -1,0 +1,42 @@
+export const theme = {
+  color: {
+    blue600: "#066889",
+    blue500: "#0786B0",
+    blue400: "#0897C7",
+    blue300: "#14BDF5",
+    blue200: "#ECF9FE",
+    gray600: "#939A9F",
+    gray500: "#BEC3C5",
+    gray400: "#D4D7D9",
+    gray300: "#E4E6E7",
+    gray200: "#F4F5F5",
+    black: "#2D3639",
+    white: "#FFFFFF",
+    green: "#44AF69",
+    yellow: "#FCAB10",
+    red: "#F8333C",
+  },
+  fontWeight: {
+    bold: 700,
+    regular: 400,
+  },
+  borderRadius: {
+    button: "24px",
+    card: "8px",
+  },
+  spacings: {
+    xxs: "4px",
+    xs: "8px",
+    s: "12px",
+    m: "16px",
+    l: "24px",
+    xl: "32px",
+  },
+  breakpoints: {
+    s: "576px",
+    m: "768px",
+    l: "992px",
+    xl: "1280px",
+    xxl: "1400px",
+  },
+}

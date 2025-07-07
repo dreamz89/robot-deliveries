@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { styled } from "styled-components"
+import { styled, ThemeProvider } from "styled-components"
 import axios from "axios"
 
-// import RobotCard from "./components/RobotCard"
-import { GlobalStyle } from "./GlobalStyle"
+import RobotCard from "@/components/RobotCard"
+import { GlobalStyle } from "@/assets/styles/global"
+import { theme } from "@/assets/styles/theme"
 
 const Container = styled.div`
   max-width: 1280px;
@@ -30,7 +31,7 @@ function App() {
   }, [])
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
         <Cards>
@@ -39,7 +40,7 @@ function App() {
           ))} */}
         </Cards>
       </Container>
-    </>
+    </ThemeProvider>
   )
 }
 
