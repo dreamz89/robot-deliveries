@@ -1,6 +1,6 @@
 ## Robot Deliveries
 
-Live: robot-deliveries.surge.sh[robot-deliveries.surge.sh]
+Live: [robot-deliveries.surge.sh](robot-deliveries.surge.sh)
 
 To run the project:
 
